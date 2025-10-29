@@ -122,9 +122,20 @@ class StockManagement implements Manageable {
         System.out.println("Produk '" + name + "' tidak ditemukan.");
     }
 
-    /**
-     * Menampilkan seluruh data produk yang tersimpan
-     */
+    public void searchProduct(String name) {
+        for (Product p : list) {
+            if (p.getName().equalsIgnoreCase(name)) {
+                System.out.println("Produk ditemukan:");
+                p.showInfo();
+                return;
+            }
+        }
+        System.out.println("Produk '" + name + "' tidak ditemukan.");
+    }
+
+        /**
+         * Menampilkan seluruh data produk yang tersimpan
+         */
     @Override
     public void printAll() {
         for (Product p : list) {
