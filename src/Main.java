@@ -122,9 +122,20 @@ class StockManagement implements Manageable {
         System.out.println("Produk '" + name + "' tidak ditemukan.");
     }
 
-    /**
-     * Menampilkan seluruh data produk yang tersimpan
-     */
+    public void searchProduct(String name) {
+        for (Product p : list) {
+            if (p.getName().equalsIgnoreCase(name)) {
+                System.out.println("Produk ditemukan:");
+                p.showInfo();
+                return;
+            }
+        }
+        System.out.println("Produk '" + name + "' tidak ditemukan.");
+    }
+
+        /**
+         * Menampilkan seluruh data produk yang tersimpan
+         */
     @Override
     public void printAll() {
         for (Product p : list) {
@@ -148,7 +159,7 @@ class StockManagement implements Manageable {
 /**
  * Kelas utama {@code Main} menjalankan program manajemen stok barang
  * Mengimplementasikan interaksi pengguna dengan melalui terminal
- * untuk menambahkan, menampilkan, dan menghapus produk
+ * untuk menambahkan, menampilkan, dan menghapus produkkkk
  * Menerapkan konsep Extract Superclass
  */
 public class Main {
