@@ -159,7 +159,7 @@ class StockManagement implements Manageable {
 /**
  * Kelas utama {@code Main} menjalankan program manajemen stok barang
  * Mengimplementasikan interaksi pengguna dengan melalui terminal
- * untuk menambahkan, menampilkan, dan menghapus produk
+ * untuk menambahkan, menampilkan, dan menghapus produkkkk
  * Menerapkan konsep Extract Superclass
  */
 public class Main {
